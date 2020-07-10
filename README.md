@@ -1,29 +1,32 @@
-#  332-Ozone-Walk
+#  :shell: :sweat_drops: :rainbow: 332-Ozone-Walk :rainbow: :high_heel: :anchor:
 
-![Login Page](INSERT IMAGE OF PROJECT HERE)
+![Home Page](INSERT IMAGE OF PROJECT HERE)
 
 ### :computer: Creator:
 
 - Roy Sanfilipo
+[Github](https://github.com/roysanfilipo)
 
 ## :sunrise: About:
 
-[332-Ozone-Walk](TBD) is a single page web application that is used to organize the user's various gigs.
+[332-Ozone-Walk](TBD) is a single page web application that advertises the rental property located at 332 Ozone Walk in Fire Island Pines off the southern coast of Long Island, New York.
 
-Add information about each gig that you booked, such as a name, date, location, the amount you will be compensated, and any additional notes you may need to remember. Don't fret if you made a mistake! You can always edit or delete your gig if you need to!
-
+This is a simple site that allows the user to see a little of what they should expect while renting 332 Ozone Walk for a summer.
 
 ## :star: Features:
 The user can:
-- Create and add a gig to their schedule of gigs
-- Edit a gig
-- Delete a gig
+- Navigate to to the main page to see an image of the house and a list of buttons
+- Click a button to see photos of the house
+- Click a button to see features the house has to offer
+- Click a button to find contact information
+- Click a button for the house rules
+- Click a button to see reviews about a house, add a review, like a review (only admin can edit or delete the review)
 
 ## :wrench: :nut_and_bolt: :hammer: The Build:
 ### Technologies:
 - TBD
 
-## :sun_with_face: :full_moon_with_face: Our Timeline:
+## :sun_with_face: :full_moon_with_face: My Timeline:
 | Day           | Tasks         |
 | ------------- |:-------------:|
 | Friday 7/10    | Create Github Repo, Start README, Project Idea, User Stories, Wireframe |
