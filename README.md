@@ -30,7 +30,7 @@ The user can:
 | Day           | Tasks         |
 | ------------- |:-------------:|
 | Friday 7/10    | Create Github Repo, Start README, Project Idea, User Stories, Wireframe |
-| Saturday 7/11      | TBD |
+| Saturday 7/11      | Research NERD stack and React Router and decide!  |
 | Sunday 7/12      | TBD |
 | Monday 7/13     | TBD |
 | Tuesday 7/14      | TBD |
