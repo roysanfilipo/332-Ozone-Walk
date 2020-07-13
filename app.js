@@ -71,9 +71,6 @@ class Guestbook extends React.Component {
 
 
 class App extends React.Component {
-        state = {
-            entries: []
-        }
 
     changeNewEntryTitle = (event) => {
         this.setState({
@@ -96,7 +93,7 @@ class App extends React.Component {
     }
 
     createEntry = (event) => {
-        event.preventDefault();
+        // event.preventDefault();
         // console.log(this.state);
         axios.post(
             '/entries',
