@@ -54,3 +54,25 @@ The user can:
 [TBD](TBD)
 - TBD
 [TBD](TBD)
+
+## Creating my database and table locally for testing:
+
+CREATE DATABASE guestbook;
+CREATE TABLE
+  entries
+  ( id serial, title TEXT, date DATE, note TEXT);
+
+  INSERT INTO
+  entries ( title, date, note )
+VALUES
+  ( 'Great experience!' , '2020-06-05', 'Had so much fun at 332! It is a clean house with lots to offer. We will be back!' );
+
+  INSERT INTO
+  entries ( title, date, note )
+VALUES
+  ( 'So much fun!' , '2020-07-05', 'Beautiful home owned by some very nice guys! Look forward to booking again next year!' );
+
+  INSERT INTO
+  entries ( title, date, note )
+VALUES
+  ( 'Paradise!' , '2020-07-05', 'Awesome pool and hot tub! So conveniently located and perfect for parties!' );
