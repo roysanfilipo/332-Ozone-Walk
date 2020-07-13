@@ -31,7 +31,7 @@ The user can:
 | ------------- |:-------------:|
 | Friday 7/10    | Create Github Repo, Start README, Project Idea, User Stories, Wireframe |
 | Saturday 7/11      | Research NERD stack and React Router and decide!  |
-| Sunday 7/12      | TBD |
+| Sunday 7/12      | Re-thinking everything and committing to PHP/SQL/ReactJS/AWS |
 | Monday 7/13     | TBD |
 | Tuesday 7/14      | TBD |
 | Wednesday 7/15      | TBD |
