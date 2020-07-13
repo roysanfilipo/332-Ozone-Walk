@@ -118,32 +118,36 @@ class App extends React.Component {
               <button>Guestbook</button>
             </div>
             <div className="main">
-
-                <ul>
-                    {
-                        this.state.entries.map(
-                            (entry) => {
-                                return (
-                                    <li>
-                                        <h4>{entry.title}</h4>
-                                        <h4>DATE: {entry.date}</h4>
-                                        {entry.note}<br/>
-                                    </li>
-                                )
-                            }
-                        )
-                    }
-                </ul>
-                <div className="newentry">
-                  <h2>Sign the guestbook!</h2>
-                  <form className="newform" onSubmit={this.createEntry}>
-                      <input onChange={this.changeNewEntryTitle} type="text" placeholder="title"/>
-                      <input onChange={this.changeNewEntryDate} type="date" placeholder="date"/>
-                      <input onChange={this.changeNewEntryNote} type="textarea" placeholder="note"/>
-                      <input type="submit" value="Add"/>
-                  </form>
+                <div className="mainphoto">
+                  <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                </div>
+                <div className="guestbook">
+                  <ul>
+                      {
+                          this.state.entries.map(
+                              (entry) => {
+                                  return (
+                                      <li>
+                                          <h4>{entry.title}</h4>
+                                          <h4>DATE: {entry.date}</h4>
+                                          {entry.note}<br/>
+                                      </li>
+                                  )
+                              }
+                          )
+                      }
+                  </ul>
+                  <div className="newentry">
+                    <h2>Sign the guestbook!</h2>
+                    <form className="newform" onSubmit={this.createEntry}>
+                        <input onChange={this.changeNewEntryTitle} type="text" placeholder="title"/>
+                        <input onChange={this.changeNewEntryDate} type="date" placeholder="date"/>
+                        <input onChange={this.changeNewEntryNote} type="textarea" placeholder="note"/>
+                        <input type="submit" value="Add"/>
+                    </form>
                   </div>
-                 </div>
+                </div>
+              </div>
             </div>
         </div>
         )
