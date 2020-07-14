@@ -1,6 +1,157 @@
+class About extends React.Component {
+    state = {
+        show: false,
+        entries: []
+    }
+
+    toggleShow = () => {
+        this.setState({
+            show: !this.state.show
+        })
+    }
+
+    render = () => {
+
+        return (
+          <div className="about">
+              <div className="aboutbutton">
+                <button onClick={this.toggleShow}>About</button>
+              </div>
+              <div>
+                  {this.state.show ? (
+                    <div>
+                      <p>This is random test content about 332 Ozone Walk in Fire Island Pines!</p>
+                    </div>
+                  ) : (
+                      ''
+                  )}
+              </div>
+          </div>
+        )
+    }
+}
+
+class Photos extends React.Component {
+    state = {
+        show: false,
+        entries: []
+    }
+
+    toggleShow = () => {
+        this.setState({
+            show: !this.state.show
+        })
+    }
+
+    render = () => {
+
+        return (
+          <div className="photosection">
+              <div className="photosbutton">
+                <button onClick={this.toggleShow}>Photos</button>
+              </div>
+              <div>
+                  {this.state.show ? (
+                    <div className="allphotos">
+                      <div className="photoone">
+                        <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                      </div>
+                      <div className="phototwo">
+                        <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                      </div>
+                      <div className="photothree">
+                        <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                      </div>
+                      <div className="photofour">
+                        <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                      </div>
+                      <div className="photofive">
+                        <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                      </div>
+                      <div className="photosix">
+                        <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                      </div>
+                    </div>
+                  ) : (
+                      ''
+                  )}
+              </div>
+          </div>
+        )
+    }
+}
+
+class Features extends React.Component {
+    state = {
+        show: false,
+        entries: []
+    }
+
+    toggleShow = () => {
+        this.setState({
+            show: !this.state.show
+        })
+    }
+
+    render = () => {
+
+        return (
+          <div className="features">
+              <div className="featuresbutton">
+                <button onClick={this.toggleShow}>Features</button>
+              </div>
+              <div>
+                  {this.state.show ? (
+                    <ul>
+                      <li>Four bedrooms and three bathrooms</li>
+                      <li>Spacious kitchen with Allclad cookware and dishwasher</li>
+                      <li>Large pool, hot tub, and outdoor shower</li>
+                      <li>Washer and dryer</li>
+                      <li>Smart TV and indoor/outdoor Sonos soundsystem</li>
+                    </ul>
+                  ) : (
+                      ''
+                  )}
+              </div>
+          </div>
+        )
+    }
+}
+
+class Contact extends React.Component {
+    state = {
+        show: false,
+        entries: []
+    }
+
+    toggleShow = () => {
+        this.setState({
+            show: !this.state.show
+        })
+    }
+
+    render = () => {
+
+        return (
+          <div className="contact">
+              <div className="contactbutton">
+                <button onClick={this.toggleShow}>Contact</button>
+              </div>
+              <div>
+                  {this.state.show ? (
+                    <div>
+                      <p>Contact us for availability! </p>
+                    </div>
+                  ) : (
+                      ''
+                  )}
+              </div>
+          </div>
+        )
+    }
+}
 
 class Guestbook extends React.Component {
-
     state = {
         show: false,
         entries: []
@@ -112,9 +263,6 @@ class App extends React.Component {
 
     }
 
-
-
-
     changeUpdateEntryTitle = (event) => {
         this.setState({
             updateEntryTitle:event.target.value
@@ -169,14 +317,6 @@ class App extends React.Component {
                   <h1>332 Ozone Walk</h1>
               </div>
               <div className="pagecontent">
-                <div className="sidebar">
-                  <button>About</button>
-                  <button>Photos</button>
-                  <button>Features</button>
-                  <button>House Rules</button>
-                  <button>Contact</button>
-                  <button>Guestbook</button>
-                </div>
                 <div className="main">
                     <div className="mainphoto">
                       <img src="https://i.imgur.com/ke1l3L4.jpg" />
@@ -187,6 +327,11 @@ class App extends React.Component {
                       changeNewEntryDate={this.changeNewEntryDate}
                       changeNewEntryNote={this.changeNewEntryNote}
                       entry={this.entry}/>
+                    <About/>
+                    <Photos/>
+                    <Features/>
+                    <Contact/>
+
                 </div>
               </div>
             </div>

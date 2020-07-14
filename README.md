@@ -32,8 +32,8 @@ The user can:
 | Friday 7/10    | Create Github Repo, Start README, Project Idea, User Stories, Wireframe |
 | Saturday 7/11      | Research NERD stack and React Router and decide!  |
 | Sunday 7/12      | Re-thinking everything and committing to PHP/SQL/ReactJS/AWS |
-| Monday 7/13     | TBD |
-| Tuesday 7/14      | TBD |
+| Monday 7/13     | Figured out hot to toggle the Guestbook button and maintain functionality |
+| Tuesday 7/14      | Implemented About, Photos, Features, and Contact buttons |
 | Wednesday 7/15      | TBD |
 | Thursday 7/16      | TBD |
 | Friday 7/17      | TBD |
