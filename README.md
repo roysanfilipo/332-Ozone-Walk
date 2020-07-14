@@ -19,8 +19,7 @@ The user can:
 - Click a button to see photos of the house
 - Click a button to see features the house has to offer
 - Click a button to find contact information
-- Click a button for the house rules
-- Click a button to see reviews about a house, add a review, like a review (only admin can edit or delete the review)
+- Click a button to see reviews about a house, add a review (only admin can edit or delete the review)
 
 ## :wrench: :nut_and_bolt: :hammer: The Build:
 ### Technologies:

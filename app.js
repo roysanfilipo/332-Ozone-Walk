@@ -333,6 +333,12 @@ class App extends React.Component {
                     <Contact/>
 
                 </div>
+                <footer>
+                  <div className="socialmedia">
+                    <a href="#"><img src="instagramlogoimage" /></a>
+                  </div>
+                  <div>© 2020 by <a href="https://github.com/roysanfilipo">Roy Sanfilipo</a></div>
+                </footer>
               </div>
             </div>
         )
