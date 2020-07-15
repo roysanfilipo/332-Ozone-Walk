@@ -1,3 +1,5 @@
+
+
 class About extends React.Component {
     state = {
         show: false,
@@ -130,6 +132,18 @@ class Contact extends React.Component {
         })
     }
 
+    sendEmail = (event) => {
+      event.preventDefault();
+
+      emailjs.sendForm('contact_service', 'contact_form', event.target, 'user_C9Y31mNs8fuYKIEUYCxUP')
+      .then((result) => {
+          console.log(result.text);
+          form.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
     render = () => {
 
         return (
@@ -140,7 +154,18 @@ class Contact extends React.Component {
               <div>
                   {this.state.show ? (
                     <div>
-                      <p>Contact us for availability! </p>
+                      <form className="contact-form" onSubmit={this.sendEmail}>
+                          <input type="hidden" name="contact_number" />
+                          <label>Name</label>
+                          <input type="text" name="user_name" />
+                          <label>Email</label>
+                          <input type="email" name="user_email" />
+                          <label>Phone #</label>
+                          <input type="text" name="user_phone" />
+                          <label>Message</label>
+                          <textarea name="message" />
+                          <input type="submit" value="Send" />
+                        </form>
                     </div>
                   ) : (
                       ''
@@ -245,7 +270,6 @@ class App extends React.Component {
 
     createEntry = (event) => {
         // event.preventDefault();
-        // console.log(this.state);
         axios.post(
             '/entries',
             {
