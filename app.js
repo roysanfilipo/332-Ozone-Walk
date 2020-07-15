@@ -3,7 +3,6 @@
 class About extends React.Component {
     state = {
         show: false,
-        entries: []
     }
 
     toggleShow = () => {
@@ -35,8 +34,7 @@ class About extends React.Component {
 
 class Photos extends React.Component {
     state = {
-        show: false,
-        entries: []
+        show: false
     }
 
     toggleShow = () => {
@@ -86,7 +84,6 @@ class Photos extends React.Component {
 class Features extends React.Component {
     state = {
         show: false,
-        entries: []
     }
 
     toggleShow = () => {
@@ -122,8 +119,7 @@ class Features extends React.Component {
 
 class Contact extends React.Component {
     state = {
-        show: false,
-        entries: []
+        show: false
     }
 
     toggleShow = () => {
@@ -134,11 +130,15 @@ class Contact extends React.Component {
 
     sendEmail = (event) => {
       event.preventDefault();
-
       emailjs.sendForm('contact_service', 'contact_form', event.target, 'user_C9Y31mNs8fuYKIEUYCxUP')
       .then((result) => {
           console.log(result.text);
-          form.reset();
+          this.setState({
+            name: '',
+            email: '',
+            phone: '',
+            message: '',
+          });
       }, (error) => {
           console.log(error.text);
       });
@@ -155,15 +155,15 @@ class Contact extends React.Component {
                   {this.state.show ? (
                     <div>
                       <form className="contact-form" onSubmit={this.sendEmail}>
-                          <input type="hidden" name="contact_number" />
+                          <input type="hidden" name="contact_number"/>
                           <label>Name</label>
-                          <input type="text" name="user_name" />
+                          <input type="text" name="user_name" value={this.state.name}/>
                           <label>Email</label>
-                          <input type="email" name="user_email" />
+                          <input type="email" name="user_email" value={this.state.email}/>
                           <label>Phone #</label>
-                          <input type="text" name="user_phone" />
+                          <input type="text" name="user_phone" value={this.state.phone}/>
                           <label>Message</label>
-                          <textarea name="message" />
+                          <textarea name="message" value={this.state.message}/>
                           <input type="submit" value="Send" />
                         </form>
                     </div>
