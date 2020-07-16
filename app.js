@@ -157,14 +157,10 @@ class Contact extends React.Component {
                     <div>
                       <form className="contact-form" onSubmit={this.sendEmail}>
                           <input type="hidden" name="contact_number"/>
-                          <label>Name</label>
-                          <input type="text" name="user_name" value={this.state.name}/>
-                          <label>Email</label>
-                          <input type="email" name="user_email" value={this.state.email}/>
-                          <label>Phone #</label>
-                          <input type="text" name="user_phone" value={this.state.phone}/>
-                          <label>Message</label>
-                          <textarea name="message" value={this.state.message}/>
+                          <input type="text" name="user_name" value={this.state.name} placeholder="name" />
+                          <input type="email" name="user_email" value={this.state.email} placeholder="email"/>
+                          <input type="text" name="user_phone" value={this.state.phone} placeholder="phone #"/>
+                          <textarea name="message" value={this.state.message} placeholder="message"/>
                           <input type="submit" value="Send" />
                         </form>
                     </div>
@@ -189,8 +185,6 @@ class Guestbook extends React.Component {
             show: !this.state.show
         })
     }
-
-
 
     componentDidMount = () => {
         axios.get('/entries').then(
