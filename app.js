@@ -139,6 +139,7 @@ class Contact extends React.Component {
             phone: '',
             message: '',
           });
+          alert('Your message has been sent!');
       }, (error) => {
           console.log(error.text);
       });
@@ -179,7 +180,7 @@ class Contact extends React.Component {
 class Guestbook extends React.Component {
     state = {
         show: false,
-        admin: false,
+        admin: true,
         entries: []
     }
 
