@@ -179,6 +179,7 @@ class Contact extends React.Component {
 class Guestbook extends React.Component {
     state = {
         show: false,
+        admin: false,
         entries: []
     }
 
@@ -187,6 +188,8 @@ class Guestbook extends React.Component {
             show: !this.state.show
         })
     }
+
+
 
     componentDidMount = () => {
         axios.get('/entries').then(
@@ -199,10 +202,11 @@ class Guestbook extends React.Component {
     }
 
     render = () => {
-        const {entry, entries, createEntry,
+        const { refreshPage, entry, createEntry,
                 changeNewEntryTitle,
                 changeNewEntryDate,
-                changeNewEntryNote } = this.props
+                changeNewEntryNote,
+                deleteEntry } = this.props
 
         return (
             <div className="guestbookbutton">
@@ -219,6 +223,9 @@ class Guestbook extends React.Component {
                                             <h4>{entry.title}</h4>
                                             <h4>DATE: {entry.date}</h4>
                                             {entry.note}<br/>
+                                            {this.state.admin ? (
+                                              <button value={entry.id} onClick={deleteEntry} >DELETE</button>
+                                            ) : ( '' )}
                                         </li>
                                     )
                                 }
@@ -250,21 +257,21 @@ class App extends React.Component {
 
     changeNewEntryTitle = (event) => {
         this.setState({
-            newEntryTitle: event.target.value,
+            newEntryTitle: event.target.value
         })
     }
 
 
     changeNewEntryDate = (event) => {
         this.setState({
-            newEntryDate: event.target.value,
+            newEntryDate: event.target.value
         })
     }
 
 
     changeNewEntryNote = (event) => {
         this.setState({
-            newEntryNote: event.target.value,
+            newEntryNote: event.target.value
         })
     }
 
@@ -289,19 +296,19 @@ class App extends React.Component {
 
     changeUpdateEntryTitle = (event) => {
         this.setState({
-            updateEntryTitle:event.target.value
+            updateEntryTitle: event.target.value
         })
     }
 
     changeUpdateEntryDate = (event) => {
         this.setState({
-            updateEntryDate:event.target.value
+            updateEntryDate: event.target.value
         })
     }
 
     changeUpdateEntryNote = (event) => {
         this.setState({
-            updateEntryNote:event.target.value
+            updateEntryNote: event.target.value
         })
     }
 
@@ -311,13 +318,13 @@ class App extends React.Component {
         axios.put(
             '/entries/' + id,
             {
-                title:this.state.updateEntryTitle,
-                date:this.state.updateEntryDate,
-                note:this.state.updateEntryNote
+                title: this.state.updateEntryTitle,
+                date: this.state.updateEntryDate,
+                note: this.state.updateEntryNote
             }
         ).then((response) => {
             this.setState({
-                entries:response.data
+                entries: response.data
             })
         })
     }
@@ -329,7 +336,8 @@ class App extends React.Component {
                     {
                         entries: response.data
                     }
-                )
+                );
+                window.location.reload();
             }
         )
     }
@@ -350,7 +358,9 @@ class App extends React.Component {
                       changeNewEntryTitle={this.changeNewEntryTitle}
                       changeNewEntryDate={this.changeNewEntryDate}
                       changeNewEntryNote={this.changeNewEntryNote}
-                      entry={this.entry}/>
+                      deleteEntry={this.deleteEntry}
+                      entry={this.entry}
+                      refreshPage={this.refreshPage}/>
                     <About/>
                     <Photos/>
                     <Features/>
