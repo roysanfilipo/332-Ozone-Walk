@@ -341,9 +341,10 @@ class App extends React.Component {
     render = () => {
         return (
           <div className="container">
-              <div className="header">
-                  <h1>332 Ozone Walk</h1>
+              <div className="row">
+                  <div className="col s12"><span className="flow-text">332 Ozone Walk</span></div>
               </div>
+              <div className="divider"></div>
               <div className="pagecontent">
                 <div className="main">
                     <div className="mainphoto">
