@@ -5,17 +5,16 @@ class Nav extends React.Component {
             toggleShowContact } = this.props
 
     return (
-      <nav>
         <div className="nav-wrapper">
-          <ul>
-            <li><button onClick={toggleShowAbout}>About</button></li>
-            <li><button onClick={toggleShowPhotos}>Photos</button></li>
-            <li><button onClick={toggleShowFeatures}>Features</button></li>
-            <li><button onClick={toggleShowGuestbook}>Guestbook</button></li>
-            <li><button onClick={toggleShowContact}>Contact</button></li>
+          <a href="#" className="brand-logo right" >332 Ozone Walk</a>
+          <ul id="nav-mobile" className="left hide-on-med-and-down">
+            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowAbout}>About</button></li>
+            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowPhotos}>Photos</button></li>
+            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowFeatures}>Features</button></li>
+            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowGuestbook}>Guestbook</button></li>
+            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowContact}>Contact</button></li>
           </ul>
         </div>
-      </nav>
     )
   }
 }
@@ -139,26 +138,34 @@ class Guestbook extends React.Component {
 
         return (
           <div>
-            <ul>
+            <div>
                 {
                     this.state.entries.map(
                         (entry) => {
                             return (
-                                <li>
-                                    <h4>{entry.title}</h4>
-                                    <h4>DATE: {entry.date}</h4>
-                                    {entry.note}<br/>
-                                    {this.state.admin ? (
-                                      <button value={entry.id} onClick={deleteEntry} >DELETE</button>
-                                    ) : ( '' )}
-                                </li>
+                              <div className="row">
+                                  <div className="col s12 m6">
+                                    <div className="card blue-grey darken-1">
+                                      <div className="card-content white-text">
+                                        <span className="card-title">{entry.title}</span>
+                                        <h6>Date: {entry.date}</h6>
+                                        <p>{entry.note}</p>
+                                      </div>
+                                      <div className="card-action">
+                                        {this.state.admin ? (
+                                          <button value={entry.id} onClick={deleteEntry} >DELETE</button>
+                                        ) : ( '' )}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                             )
                         }
                     )
                 }
-            </ul>
+            </div>
             <div className="newentry">
-              <h2>Sign the guestbook!</h2>
+              <h5>Sign the guestbook!</h5>
               <form className="newform" onSubmit={createEntry}>
                   <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
                   <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
@@ -320,16 +327,15 @@ class App extends React.Component {
     render = () => {
         return (
           <div className="container">
-              <div className="row">
-                  <div className="col s12"><span className="flow-text">332 Ozone Walk</span></div>
+                <nav>
                   <Nav
-                    toggleShowAbout={this.toggleShowAbout}
-                    toggleShowPhotos={this.toggleShowPhotos}
-                    toggleShowFeatures={this.toggleShowFeatures}
-                    toggleShowGuestbook={this.toggleShowGuestbook}
-                    toggleShowContact={this.toggleShowContact}
+                      toggleShowAbout={this.toggleShowAbout}
+                      toggleShowPhotos={this.toggleShowPhotos}
+                      toggleShowFeatures={this.toggleShowFeatures}
+                      toggleShowGuestbook={this.toggleShowGuestbook}
+                      toggleShowContact={this.toggleShowContact}
                   />
-              </div>
+                </nav>
               <div className="pagecontent">
                 <div className="main">
                     <div className="mainphoto">
