@@ -21,7 +21,8 @@ class About extends React.Component {
               <div>
                   {this.state.show ? (
                     <div>
-                      <p>This is random test content about 332 Ozone Walk in Fire Island Pines!</p>
+                      <p>This is random test content about 332 Ozone Walk in Fire Island Pines!<br/>
+                      Who really knows what to write here, you know? </p>
                     </div>
                   ) : (
                       ''
@@ -348,6 +349,9 @@ class App extends React.Component {
                     <div className="mainphoto">
                       <img src="https://i.imgur.com/ke1l3L4.jpg" />
                     </div>
+                    <About/>
+                    <Photos/>
+                    <Features/>
                     <Guestbook
                       createEntry={this.createEntry}
                       changeNewEntryTitle={this.changeNewEntryTitle}
@@ -356,9 +360,6 @@ class App extends React.Component {
                       deleteEntry={this.deleteEntry}
                       entry={this.entry}
                       refreshPage={this.refreshPage}/>
-                    <About/>
-                    <Photos/>
-                    <Features/>
                     <Contact/>
 
                 </div>
