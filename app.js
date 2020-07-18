@@ -6,13 +6,13 @@ class Nav extends React.Component {
 
     return (
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo right" >332 Ozone Walk</a>
-          <ul id="nav-mobile" className="left hide-on-med-and-down">
-            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowAbout}>About</button></li>
-            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowPhotos}>Photos</button></li>
-            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowFeatures}>Features</button></li>
-            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowGuestbook}>Guestbook</button></li>
-            <li><button className="waves-effect waves-light btn-small" onClick={toggleShowContact}>Contact</button></li>
+          <h2>332 Ozone Walk</h2>
+          <ul id="nav-mobile" className="right">
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowAbout}>About</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowPhotos}>Photos</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowFeatures}>Features</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowGuestbook}>Guestbook</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowContact}>Contact</button></li>
           </ul>
         </div>
     )
@@ -33,24 +33,26 @@ class About extends React.Component {
 class Photos extends React.Component {
     render = () => {
         return (
-          <div className="allphotos">
-            <div className="photoone">
-              <img src="https://i.imgur.com/ke1l3L4.jpg" />
-            </div>
-            <div className="phototwo">
-              <img src="https://i.imgur.com/ke1l3L4.jpg" />
-            </div>
-            <div className="photothree">
-              <img src="https://i.imgur.com/ke1l3L4.jpg" />
-            </div>
-            <div className="photofour">
-              <img src="https://i.imgur.com/ke1l3L4.jpg" />
-            </div>
-            <div className="photofive">
-              <img src="https://i.imgur.com/ke1l3L4.jpg" />
-            </div>
-            <div className="photosix">
-              <img src="https://i.imgur.com/ke1l3L4.jpg" />
+          <div className="container">
+            <div classname="row">
+              <div className="col s4">
+                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+              </div>
+              <div className="col s4">
+                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+              </div>
+              <div className="col s4">
+                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+              </div>
+              <div className="col s4">
+                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+              </div>
+              <div className="col s4">
+                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+              </div>
+              <div className="col s4">
+                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+              </div>
             </div>
           </div>
         )
@@ -106,7 +108,7 @@ class Contact extends React.Component {
                 <input type="email" name="user_email" value={this.state.email} placeholder="email"/>
                 <input type="text" name="user_phone" value={this.state.phone} placeholder="phone #"/>
                 <textarea name="message" value={this.state.message} placeholder="message"/>
-                <input type="submit" value="Send" />
+                <input className="waves-effect waves-light btn-small blue-grey lighten-2" type="submit" value="Send" />
             </form>
           </div>
         )
@@ -153,7 +155,7 @@ class Guestbook extends React.Component {
                                       </div>
                                       <div className="card-action">
                                         {this.state.admin ? (
-                                          <button value={entry.id} onClick={deleteEntry} >DELETE</button>
+                                          <button className="waves-effect waves-light btn-small blue-grey lighten-2" value={entry.id} onClick={deleteEntry} >DELETE</button>
                                         ) : ( '' )}
                                       </div>
                                     </div>
@@ -164,13 +166,13 @@ class Guestbook extends React.Component {
                     )
                 }
             </div>
-            <div className="newentry">
+            <div className="container">
               <h5>Sign the guestbook!</h5>
               <form className="newform" onSubmit={createEntry}>
                   <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
                   <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
                   <input onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
-                  <input type="submit" value="Add"/>
+                  <input className="waves-effect waves-light btn-small blue-grey lighten-2" type="submit" value="Add"/>
               </form>
             </div>
           </div>
@@ -327,24 +329,26 @@ class App extends React.Component {
     render = () => {
         return (
           <div className="container">
-                <nav>
-                  <Nav
-                      toggleShowAbout={this.toggleShowAbout}
-                      toggleShowPhotos={this.toggleShowPhotos}
-                      toggleShowFeatures={this.toggleShowFeatures}
-                      toggleShowGuestbook={this.toggleShowGuestbook}
-                      toggleShowContact={this.toggleShowContact}
-                  />
-                </nav>
+                <header>
+                  <nav className="blue-grey">
+                    <Nav
+                        toggleShowAbout={this.toggleShowAbout}
+                        toggleShowPhotos={this.toggleShowPhotos}
+                        toggleShowFeatures={this.toggleShowFeatures}
+                        toggleShowGuestbook={this.toggleShowGuestbook}
+                        toggleShowContact={this.toggleShowContact}
+                    />
+                  </nav>
+                </header>
               <div className="pagecontent">
                 <div className="main">
-                    <div className="mainphoto">
+                    <div className ="center-align">
                       <img src="https://i.imgur.com/ke1l3L4.jpg" />
                     </div>
 
                     <div className="about">
                         {this.state.showabout ? (
-                          <div>
+                          <div className="container">
                             <About/>
                           </div>
                         ) : (
@@ -353,21 +357,21 @@ class App extends React.Component {
                     </div>
 
                     <div className="photos">
-                        <div>
                             {this.state.showphotos ? (
-                              <Photos/>
+                                <Photos/>
                             ) : (
                                 ''
                             )}
-                        </div>
                     </div>
 
                     <div className="features">
+                      <div  className="container">
                         {this.state.showfeatures ? (
                             <Features/>
                         ) : (
                             ''
                         )}
+                      </div>
                     </div>
 
                     <div className="guestbook">
@@ -386,7 +390,9 @@ class App extends React.Component {
 
                     <div className="contact">
                             {this.state.showcontact ? (
-                              <Contact/>
+                              <div className="container">
+                                <Contact/>
+                              </div>
                             ) : (
                                 ''
                             )}

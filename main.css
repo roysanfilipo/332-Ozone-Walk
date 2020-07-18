@@ -1,4 +1,16 @@
 
 img {
-  width: 600px;
+  width: 100%;
+}
+
+.photos img {
+  width: 50%;
+}
+
+li {
+  margin: 2px;
+}
+
+h2 {
+  padding: 5px;
 }
