@@ -6,8 +6,8 @@ class Nav extends React.Component {
 
     return (
         <div className="nav-wrapper">
-          <h2>332 Ozone Walk</h2>
-          <ul id="nav-mobile" className="right">
+          <a href="#" className="brand-logo right socialmedia"><img src="https://i.imgur.com/3ZVWPLj.png" /></a>
+          <ul id="nav-mobile" className="left">
             <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowAbout}>About</button></li>
             <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowPhotos}>Photos</button></li>
             <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowFeatures}>Features</button></li>
@@ -34,23 +34,23 @@ class Photos extends React.Component {
     render = () => {
         return (
           <div className="container">
-            <div classname="row">
-              <div className="col s4">
+            <div className="row">
+              <div className="col s6">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s4">
+              <div className="col s6">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s4">
+              <div className="col s6">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s4">
+              <div className="col s6">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s4">
+              <div className="col s6">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s4">
+              <div className="col s6">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
             </div>
@@ -117,7 +117,7 @@ class Contact extends React.Component {
 
 class Guestbook extends React.Component {
     state = {
-        admin: true,
+        admin: false,
         entries: []
     }
 
@@ -183,6 +183,7 @@ class Guestbook extends React.Component {
 
 class App extends React.Component {
   state = {
+      showimage: true,
       showabout: false,
       showphotos: false,
       showfeatures: false,
@@ -196,7 +197,8 @@ class App extends React.Component {
           showphotos: false,
           showfeatures: false,
           showguestbook: false,
-          showcontact: false
+          showcontact: false,
+          showimage: this.state.showabout
       })
   }
 
@@ -206,7 +208,8 @@ class App extends React.Component {
           showabout: false,
           showfeatures: false,
           showguestbook: false,
-          showcontact: false
+          showcontact: false,
+          showimage: this.state.showphotos
       })
   }
 
@@ -216,7 +219,8 @@ class App extends React.Component {
           showabout: false,
           showphotos: false,
           showguestbook: false,
-          showcontact: false
+          showcontact: false,
+          showimage: this.state.showfeatures
       })
   }
 
@@ -226,7 +230,8 @@ class App extends React.Component {
           showphotos: false,
           showfeatures: false,
           showabout: false,
-          showcontact: false
+          showcontact: false,
+          showimage: this.state.showguestbook
       })
   }
 
@@ -236,7 +241,8 @@ class App extends React.Component {
           showphotos: false,
           showfeatures: false,
           showguestbook: false,
-          showabout: false
+          showabout: false,
+          showimage: this.state.showcontact
       })
   }
 
@@ -328,8 +334,8 @@ class App extends React.Component {
 
     render = () => {
         return (
-          <div className="container">
-                <header>
+          <div>
+                <div className="navbar-fixed">
                   <nav className="blue-grey">
                     <Nav
                         toggleShowAbout={this.toggleShowAbout}
@@ -339,11 +345,17 @@ class App extends React.Component {
                         toggleShowContact={this.toggleShowContact}
                     />
                   </nav>
-                </header>
+                </div>
               <div className="pagecontent">
                 <div className="main">
+                    <h1>332 Ozone Walk</h1>
+                    <h3>Fire Island Pines</h3>
                     <div className ="center-align">
-                      <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                      {this.state.showimage ? (
+                        <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                      ) : (
+                        ''
+                      )}
                     </div>
 
                     <div className="about">
@@ -402,7 +414,7 @@ class App extends React.Component {
 
                 <footer>
                   <div className="socialmedia">
-                    <a href="#"><img src="instagramlogoimage" /></a>
+
                   </div>
                   <div>© 2020 by <a href="https://github.com/roysanfilipo">Roy Sanfilipo</a></div>
                 </footer>

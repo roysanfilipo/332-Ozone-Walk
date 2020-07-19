@@ -49,10 +49,11 @@ The user can:
 - TBD
 
 ## :blue_book: Sources:
-- TBD   
-[TBD](TBD)
-- TBD
-[TBD](TBD)
+- Materialize Framework
+[MaterializeCSS](https://materializecss.com/)
+- Instagram Logo
+[icons8](https://img.icons8.com/)
+
 
 ## Creating my database and table locally for testing:
 
