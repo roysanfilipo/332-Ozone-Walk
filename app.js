@@ -149,7 +149,7 @@ class Contact extends React.Component {
                 <input type="text" name="user_name" value={this.state.name} placeholder="name" />
                 <input type="email" name="user_email" value={this.state.email} placeholder="email"/>
                 <input type="text" name="user_phone" value={this.state.phone} placeholder="phone #"/>
-                <textarea name="message" value={this.state.message} placeholder="message"/>
+                <textarea name="message" type="textarea" value={this.state.message} placeholder="message"/>
                 <input className="waves-effect waves-light btn-small blue-grey lighten-2 send" type="submit" value="Send" />
             </form>
           </div>
@@ -213,7 +213,7 @@ class Guestbook extends React.Component {
               <form className="newform" onSubmit={createEntry}>
                   <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
                   <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
-                  <textarea onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
+                  <textarea className="textarea" onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
                   <input className="waves-effect waves-light btn-small blue-grey lighten-2 add" type="submit" value="Add"/>
               </form>
             </div>
