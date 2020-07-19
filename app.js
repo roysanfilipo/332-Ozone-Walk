@@ -22,10 +22,24 @@ class Nav extends React.Component {
 class About extends React.Component {
     render = () => {
         return (
-          <div className="aboutcontent">
-            <p>This is random test content about 332 Ozone Walk in Fire Island Pines!<br/>
-            Who really knows what to write here, you know? </p>
-          </div>
+            <div className="row">
+                <div className="col s12">
+                  <div className="card blue-grey darken-1">
+                    <div className="card-content white-text">
+                      <span className="card-title">Welcome</span>
+                        <div className="section">
+                          <p>332 Ozone is a beautiful four bedroom, 3 bathroom residence located on the quiet, eastern end of Fire Island Pines.</p>
+                        </div>
+                        <div className="section">
+                          <p>This 1979 classic home, best known for appearing on the cover of Tom Bianchi’s famous art book, “Fire Island Pines”, can sleep 8 comfortably while boasting both ocean and bay views from its second floor.</p>
+                        </div>
+                        <div className="section">
+                          <p>With a pool, jacuzzi and the beach only a few steps away, 332 has everything you and your friends will need to make your next summer the most memorable one.</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
         )
     }
 }
@@ -62,15 +76,22 @@ class Photos extends React.Component {
 class Features extends React.Component {
     render = () => {
         return (
-          <div className="features">
-            <ul>
-              <li>Four bedrooms and three bathrooms</li>
-              <li>Spacious kitchen with Allclad cookware and dishwasher</li>
-              <li>Large pool, hot tub, and outdoor shower</li>
-              <li>Washer and dryer</li>
-              <li>Smart TV and indoor/outdoor Sonos soundsystem</li>
-            </ul>
-          </div>
+          <div className="row">
+              <div className="col s12">
+                <div className="card blue-grey darken-1">
+                  <div className="card-content white-text">
+                    <span className="card-title">Features</span>
+                    <ul>
+                      <li>Four bedrooms and three bathrooms</li>
+                      <li>Spacious kitchen with Allclad cookware and dishwasher</li>
+                      <li>Large pool, hot tub, and outdoor shower</li>
+                      <li>Washer and dryer</li>
+                      <li>Smart TV and indoor/outdoor Sonos soundsystem</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
         )
     }
 }
