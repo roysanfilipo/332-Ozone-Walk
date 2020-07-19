@@ -55,10 +55,10 @@ class Photos extends React.Component {
               <div className="col s12 m12 l12 xl12">
                 <img src="https://i.imgur.com/afK1sfb.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl6">
+              <div className="col s12 m12 l6 xl6">
                 <img src="https://i.imgur.com/n22Xh09.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl6">
+              <div className="col s12 m12 l6 xl6">
                 <img src="https://i.imgur.com/JEXwvED.jpg" />
               </div>
               <div className="col s12 m12 l12 xl12">
@@ -70,25 +70,22 @@ class Photos extends React.Component {
               <div className="col s12 m6 l6 xl4">
                 <img src="https://i.imgur.com/tsXJikF.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl4">
-                <img src="https://i.imgur.com/3pAYXWH.jpg" />
+              <div className="col s12 m12 l6 xl6">
+                <img src="https://i.imgur.com/3pAYXWH.jpg?1" />
               </div>
-              <div className="col s12 m6 l6 xl4">
+              <div className="col s12 m12 l6 xl6">
                 <img src="https://i.imgur.com/fuSapn3.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl4">
-                <img src="https://i.imgur.com/K1O1RjW.jpg" />
-              </div>
-              <div className="col s12 m6 l6 xl4">
+              <div className="col s12 m12 l12 xl12">
                 <img src="https://i.imgur.com/YFwLNRH.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl4">
+              <div className="col s12 m12 l6 xl6">
                 <img src="https://i.imgur.com/5n84cz0.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl4">
+              <div className="col s12 m12 l6 xl6">
                 <img src="https://i.imgur.com/6g1rJ7v.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl4">
+              <div className="col s12 m12 l6 xl6">
                 <img src="https://i.imgur.com/EMqc59I.jpg" />
               </div>
             </div>
@@ -153,7 +150,7 @@ class Contact extends React.Component {
                 <input type="email" name="user_email" value={this.state.email} placeholder="email"/>
                 <input type="text" name="user_phone" value={this.state.phone} placeholder="phone #"/>
                 <textarea name="message" value={this.state.message} placeholder="message"/>
-                <input className="waves-effect waves-light btn-small blue-grey lighten-2" type="submit" value="Send" />
+                <input className="waves-effect waves-light btn-small blue-grey lighten-2 send" type="submit" value="Send" />
             </form>
           </div>
         )
@@ -217,7 +214,7 @@ class Guestbook extends React.Component {
                   <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
                   <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
                   <input onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
-                  <input className="waves-effect waves-light btn-small blue-grey lighten-2" type="submit" value="Add"/>
+                  <input className="waves-effect waves-light btn-small blue-grey lighten-2 add" type="submit" value="Add"/>
               </form>
             </div>
           </div>
@@ -457,11 +454,12 @@ class App extends React.Component {
 
                 </div>
 
-                <footer>
-                  <div className="socialmedia">
-
+                <footer className="page-footer blue-grey">
+                  <div className="footer-copyright">
+                    <div className="container">
+                    © 2020 by <a href="https://github.com/roysanfilipo">Roy Sanfilipo</a>
+                    </div>
                   </div>
-                  <div>© 2020 by <a href="https://github.com/roysanfilipo">Roy Sanfilipo</a></div>
                 </footer>
 
               </div>

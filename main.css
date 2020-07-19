@@ -26,3 +26,15 @@ nav {
   width: 75%;
   margin: 0 auto;
 }
+
+footer {
+  margin-top: 10px;
+}
+
+.add {
+  margin-left: 8px;
+}
+
+.send {
+  margin-top: 8px;
+}
