@@ -64,10 +64,10 @@ class Photos extends React.Component {
               <div className="col s12 m12 l12 xl12">
                 <img src="https://i.imgur.com/oAlFsWB.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl4">
+              <div className="col s12 m6 l6 xl6">
                 <img src="https://i.imgur.com/1nCaAJc.jpg" />
               </div>
-              <div className="col s12 m6 l6 xl4">
+              <div className="col s12 m6 l6 xl6">
                 <img src="https://i.imgur.com/tsXJikF.jpg" />
               </div>
               <div className="col s12 m12 l6 xl6">
@@ -213,7 +213,7 @@ class Guestbook extends React.Component {
               <form className="newform" onSubmit={createEntry}>
                   <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
                   <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
-                  <input onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
+                  <textarea onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
                   <input className="waves-effect waves-light btn-small blue-grey lighten-2 add" type="submit" value="Add"/>
               </form>
             </div>

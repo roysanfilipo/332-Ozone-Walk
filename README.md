@@ -33,11 +33,11 @@ The user can:
 | Sunday 7/12      | Re-thinking everything and committing to PHP/SQL/ReactJS/AWS |
 | Monday 7/13     | Figured out hot to toggle the Guestbook button and maintain functionality |
 | Tuesday 7/14      | Implemented About, Photos, Features, and Contact buttons |
-| Wednesday 7/15      | TBD |
-| Thursday 7/16      | TBD |
-| Friday 7/17      | TBD |
-| Saturday 7/18      | TBD |
-| Sunday 7/19      | TBD |
+| Wednesday 7/15      | Learned how to use emailJS and implemented with the sendEmail function in contact class |
+| Thursday 7/16      | Deployed to Heroku and tested everything to make sure it was working.  |
+| Friday 7/17      | Added Nav class for nav buttons and moved toggle functions to the App class. Started to work with Materialize |
+| Saturday 7/18      | Learned basic Adobe Lightroom to edit photos and added them to the photos class. Worked on Materialize css and site responsiveness |
+| Sunday 7/19      | Worked on styling and spacing of photos. Added styling to the footer. Fixed styling on the forms. |
 | Monday 7/20      | TBD |
 | Tuesday 7/21      | TBD |
 
