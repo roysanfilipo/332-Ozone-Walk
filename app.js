@@ -49,23 +49,47 @@ class Photos extends React.Component {
         return (
           <div className="container">
             <div className="row">
-              <div className="col s12 m6 l6 xl4">
-                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+              <div className="col s12 m12 l12 xl12">
+                <img src="https://i.imgur.com/HRTRjPd.jpg" />
+              </div>
+              <div className="col s12 m12 l12 xl12">
+                <img src="https://i.imgur.com/afK1sfb.jpg" />
+              </div>
+              <div className="col s12 m6 l6 xl6">
+                <img src="https://i.imgur.com/n22Xh09.jpg" />
+              </div>
+              <div className="col s12 m6 l6 xl6">
+                <img src="https://i.imgur.com/JEXwvED.jpg" />
+              </div>
+              <div className="col s12 m12 l12 xl12">
+                <img src="https://i.imgur.com/oAlFsWB.jpg" />
               </div>
               <div className="col s12 m6 l6 xl4">
-                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                <img src="https://i.imgur.com/1nCaAJc.jpg" />
               </div>
               <div className="col s12 m6 l6 xl4">
-                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                <img src="https://i.imgur.com/tsXJikF.jpg" />
               </div>
               <div className="col s12 m6 l6 xl4">
-                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                <img src="https://i.imgur.com/3pAYXWH.jpg" />
               </div>
               <div className="col s12 m6 l6 xl4">
-                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                <img src="https://i.imgur.com/fuSapn3.jpg" />
               </div>
               <div className="col s12 m6 l6 xl4">
-                <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                <img src="https://i.imgur.com/K1O1RjW.jpg" />
+              </div>
+              <div className="col s12 m6 l6 xl4">
+                <img src="https://i.imgur.com/YFwLNRH.jpg" />
+              </div>
+              <div className="col s12 m6 l6 xl4">
+                <img src="https://i.imgur.com/5n84cz0.jpg" />
+              </div>
+              <div className="col s12 m6 l6 xl4">
+                <img src="https://i.imgur.com/6g1rJ7v.jpg" />
+              </div>
+              <div className="col s12 m6 l6 xl4">
+                <img src="https://i.imgur.com/EMqc59I.jpg" />
               </div>
             </div>
           </div>
@@ -373,7 +397,7 @@ class App extends React.Component {
                     <h3>Fire Island Pines</h3>
                     <div className ="center-align">
                       {this.state.showimage ? (
-                        <img src="https://i.imgur.com/ke1l3L4.jpg" />
+                        <img src="https://i.imgur.com/OZoSefJ.jpg" />
                       ) : (
                         ''
                       )}
