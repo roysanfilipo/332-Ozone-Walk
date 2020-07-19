@@ -35,22 +35,22 @@ class Photos extends React.Component {
         return (
           <div className="container">
             <div className="row">
-              <div className="col s6">
+              <div className="col s12 m6 l6 xl4">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s6">
+              <div className="col s12 m6 l6 xl4">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s6">
+              <div className="col s12 m6 l6 xl4">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s6">
+              <div className="col s12 m6 l6 xl4">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s6">
+              <div className="col s12 m6 l6 xl4">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
-              <div className="col s6">
+              <div className="col s12 m6 l6 xl4">
                 <img src="https://i.imgur.com/ke1l3L4.jpg" />
               </div>
             </div>
@@ -140,27 +140,27 @@ class Guestbook extends React.Component {
 
         return (
           <div>
-            <div>
+            <div className="onereview">
                 {
                     this.state.entries.map(
                         (entry) => {
                             return (
-                              <div className="row">
-                                  <div className="col s12 m6">
-                                    <div className="card blue-grey darken-1">
-                                      <div className="card-content white-text">
-                                        <span className="card-title">{entry.title}</span>
-                                        <h6>Date: {entry.date}</h6>
-                                        <p>{entry.note}</p>
-                                      </div>
-                                      <div className="card-action">
-                                        {this.state.admin ? (
-                                          <button className="waves-effect waves-light btn-small blue-grey lighten-2" value={entry.id} onClick={deleteEntry} >DELETE</button>
-                                        ) : ( '' )}
+                                <div className="row">
+                                    <div className="col s12">
+                                      <div className="card blue-grey darken-1">
+                                        <div className="card-content white-text">
+                                          <span className="card-title">{entry.title}</span>
+                                          <h6>Date: {entry.date}</h6>
+                                          <p>{entry.note}</p>
+                                        </div>
+                                          {this.state.admin ? (
+                                            <div className="card-action">
+                                              <button className="waves-effect waves-light btn-small blue-grey lighten-2" value={entry.id} onClick={deleteEntry} >Delete</button>
+                                            </div>
+                                          ) : ( '' )}
                                       </div>
                                     </div>
                                   </div>
-                                </div>
                             )
                         }
                     )

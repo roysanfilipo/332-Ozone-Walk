@@ -6,10 +6,6 @@ img {
   width: 100%;
 }
 
-.photos img {
-  width: 100%;
-}
-
 li {
   margin: 2px;
 }
@@ -29,4 +25,8 @@ nav {
 .pagecontent {
   width: 75%;
   margin: 0 auto;
+}
+
+.onereview {
+  margin: 0;
 }
