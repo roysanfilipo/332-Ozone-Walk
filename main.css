@@ -1,9 +1,60 @@
 /* * {
   border: 1px solid gold;
 } */
+body {
+  background-color: #ebeff0;
+}
+h1, h3 {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.onereview {
+  align-content: center;
+}
+
+.address {
+  font-size: 75px;
+}
+
+.location {
+  font-size: 35px;
+}
+
+.abouttexttitle {
+  font-size: 30px;
+}
+
+.abouttext {
+  font-size: 15px;
+}
+
+.featurestitle {
+  font-size: 30px;
+}
+
+.featurestext {
+  font-size: 15px;
+}
+
+.guesttitle {
+  font-size: 30px;
+}
+
+.guestdate {
+  font-size: 12px;
+}
+
+.guestentry {
+  font-size: 15px;
+}
+
+.footer {
+  font-size: 20px;
+}
 
 img {
   width: 100%;
+  padding: 0;
 }
 
 li {
@@ -39,14 +90,66 @@ footer {
   margin-left: 8px;
 }
 
-textarea {
-  height: 200px;
-  width: 300px;
-  max-width: 350px;
-  max-height: 250px;
-  margin: 20px;
-}
-
 @media (max-width: 1125px) {
+  .address {
+    font-size: 80px;
+  }
+
+  .location {
+    font-size: 50px;
+  }
+
+  .footer {
+    font-size: 30px;
+  }
+
+  .button {
+    font-size: 30px;
+    height: 40px;
+  }
+
+  .add {
+    font-size: 30px;
+    height: 40px;
+  }
+
+  .send {
+    font-size: 30px;
+    height: 40px;
+  }
+
+  .socialmedia img {
+    width: 45px;
+    margin-top: 15px;
+    margin-right: 25px;
+  }
+
+  .abouttexttitle {
+    font-size: 50px;
+  }
+
+  .abouttext {
+    font-size: 35px;
+  }
+
+  .featurestitle {
+    font-size: 50px;
+  }
+
+  .featurestext {
+    font-size: 35px;
+  }
+
+  .guesttitle {
+    font-size: 50px;
+  }
+
+  .guestdate {
+    font-size: 25px;
+  }
+
+  .guestentry {
+    font-size: 35px;
+  }
 
 }

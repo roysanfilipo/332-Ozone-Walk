@@ -8,11 +8,11 @@ class Nav extends React.Component {
         <div className="nav-wrapper">
           <a href="#" className="brand-logo right socialmedia"><img src="https://i.imgur.com/3ZVWPLj.png" /></a>
           <ul id="nav-mobile" className="left">
-            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowAbout}>About</button></li>
-            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowPhotos}>Photos</button></li>
-            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowFeatures}>Features</button></li>
-            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowGuestbook}>Guestbook</button></li>
-            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2" onClick={toggleShowContact}>Contact</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2 button" onClick={toggleShowAbout}>About</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2 button" onClick={toggleShowPhotos}>Photos</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2 button" onClick={toggleShowFeatures}>Features</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2 button" onClick={toggleShowGuestbook}>Guestbook</button></li>
+            <li><button className="waves-effect waves-light btn-small blue-grey lighten-2 button" onClick={toggleShowContact}>Contact</button></li>
           </ul>
         </div>
     )
@@ -24,16 +24,16 @@ class About extends React.Component {
         return (
             <div className="row">
                 <div className="col s12">
-                  <div className="card blue-grey darken-1">
+                  <div className="card blue-grey darken-1 z-depth-5">
                     <div className="card-content white-text">
-                      <span className="card-title">Welcome</span>
-                        <div className="section">
+                      <span className="abouttexttitle">Welcome</span>
+                        <div className="section abouttext">
                           <p>332 Ozone is a beautiful four bedroom, 3 bathroom residence located on the quiet, eastern end of Fire Island Pines.</p>
                         </div>
-                        <div className="section">
+                        <div className="section abouttext">
                           <p>This 1979 classic home, best known for appearing on the cover of Tom Bianchi’s famous art book, “Fire Island Pines”, can sleep 8 comfortably while boasting both ocean and bay views from its second floor.</p>
                         </div>
-                        <div className="section">
+                        <div className="section abouttext">
                           <p>With a pool, jacuzzi and the beach only a few steps away, 332 has everything you and your friends will need to make your next summer the most memorable one.</p>
                         </div>
                     </div>
@@ -99,15 +99,15 @@ class Features extends React.Component {
         return (
           <div className="row">
               <div className="col s12">
-                <div className="card blue-grey darken-1">
+                <div className="card blue-grey darken-1 z-depth-5">
                   <div className="card-content white-text">
-                    <span className="card-title">Features</span>
+                    <span className="featurestitle">Features</span>
                     <ul>
-                      <li>Four bedrooms and three bathrooms</li>
-                      <li>Spacious kitchen with Allclad cookware and dishwasher</li>
-                      <li>Large pool, hot tub, and outdoor shower</li>
-                      <li>Washer and dryer</li>
-                      <li>Smart TV and indoor/outdoor Sonos soundsystem</li>
+                      <li className="featurestext">Four bedrooms and three bathrooms</li>
+                      <li className="featurestext">Spacious kitchen with Allclad cookware and dishwasher</li>
+                      <li className="featurestext">Large pool, hot tub, and outdoor shower</li>
+                      <li className="featurestext">Washer and dryer</li>
+                      <li className="featurestext">Smart TV and indoor/outdoor Sonos soundsystem</li>
                     </ul>
                   </div>
                 </div>
@@ -149,7 +149,7 @@ class Contact extends React.Component {
                 <input type="text" name="user_name" value={this.state.name} placeholder="name" />
                 <input type="email" name="user_email" value={this.state.email} placeholder="email"/>
                 <input type="text" name="user_phone" value={this.state.phone} placeholder="phone #"/>
-                <textarea name="message" type="textarea" value={this.state.message} placeholder="message"/>
+                <textarea name="message" class="materialize-textarea" type="textarea" value={this.state.message} placeholder="message"/>
                 <input className="waves-effect waves-light btn-small blue-grey lighten-2 send" type="submit" value="Send" />
             </form>
           </div>
@@ -189,11 +189,11 @@ class Guestbook extends React.Component {
                             return (
                                 <div className="row">
                                     <div className="col s12">
-                                      <div className="card blue-grey darken-1">
+                                      <div className="card blue-grey darken-1 z-depth-5">
                                         <div className="card-content white-text">
-                                          <span className="card-title">{entry.title}</span>
-                                          <h6>Date: {entry.date}</h6>
-                                          <p>{entry.note}</p>
+                                          <span className="guesttitle">{entry.title}</span>
+                                          <h6 className="guestdate">Date: {entry.date}</h6>
+                                          <p className="guestentry">{entry.note}</p>
                                         </div>
                                           {this.state.admin ? (
                                             <div className="card-action">
@@ -209,11 +209,11 @@ class Guestbook extends React.Component {
                 }
             </div>
             <div className="container">
-              <h5>Sign the guestbook!</h5>
+              <h5 className="guesttitle">Sign the guestbook!</h5>
               <form className="newform" onSubmit={createEntry}>
                   <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
                   <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
-                  <textarea className="textarea" onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
+                  <textarea class="materialize-textarea" onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
                   <input className="waves-effect waves-light btn-small blue-grey lighten-2 add" type="submit" value="Add"/>
               </form>
             </div>
@@ -390,9 +390,9 @@ class App extends React.Component {
                 </div>
               <div className="pagecontent">
                 <div className="main">
-                    <h1>332 Ozone Walk</h1>
-                    <h3>Fire Island Pines</h3>
-                    <div className ="center-align">
+                    <h1 className="address">332 Ozone Walk</h1>
+                    <h3 className="location">Fire Island Pines</h3>
+                    <div className ="center-align z-depth-5">
                       {this.state.showimage ? (
                         <img src="https://i.imgur.com/OZoSefJ.jpg" />
                       ) : (
@@ -456,7 +456,7 @@ class App extends React.Component {
 
                 <footer className="page-footer blue-grey">
                   <div className="footer-copyright">
-                    <div className="container">
+                    <div className="container footer">
                     © 2020 by <a href="https://github.com/roysanfilipo">Roy Sanfilipo</a>
                     </div>
                   </div>
