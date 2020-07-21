@@ -14,7 +14,7 @@
 This is a simple site that allows the user to see a little of what they should expect while renting 332 Ozone Walk for a summer.
 
 ## :star: Features:
-###The user can:
+### The user can:
 - Navigate to to the main page to see an image of the house and a navbar with buttons
 - Click a button to learn a little about the property
 - Click a button to see photos of the house
@@ -25,24 +25,28 @@ This is a simple site that allows the user to see a little of what they should e
 ## :wrench: :nut_and_bolt: :hammer: The Build:
 ### Technologies:
 - PHP Backend (utilized for the guestbook)
+- SQL
 - ReactJS
+- HTML5
+- CSS
 - MaterializeCSS
 - emailJS Service for contact email backend
+- Heroku
 
 ## :sun_with_face: :full_moon_with_face: My Timeline:
 | Day           | Tasks         |
 | ------------- |:-------------:|
-| Friday 7/10    | Create Github Repo, Start README, Project Idea, User Stories, Wireframe |
-| Saturday 7/11      | Research NERD stack and React Router and decide!  |
+| Friday 7/10    | Create Github Repo, Started README.md, Project Idea, User Stories, Wireframe |
+| Saturday 7/11      | Research NERD stack, hooks and React Router and decide!  |
 | Sunday 7/12      | Re-thinking everything and committing to PHP/SQL/ReactJS/AWS |
-| Monday 7/13     | Figured out hot to toggle the Guestbook button and maintain functionality |
-| Tuesday 7/14      | Implemented About, Photos, Features, and Contact buttons |
-| Wednesday 7/15      | Learned how to use emailJS and implemented with the sendEmail function in contact class |
+| Monday 7/13     | Gave up on the AWS idea and committing to Heroku. Built PHP backend for guestbook and created database and table locally with SQL. Built class components with ReactJS in my app.js file. Can display content in the browser. Figured out hot to toggle the Guestbook button and maintain functionality |
+| Tuesday 7/14      | Implemented About, Photos, Features, and Contact buttons and toggle functions to go with them. |
+| Wednesday 7/15      | Learned how to use emailJS and implemented with the sendEmail function in contact class and script in index.html file|
 | Thursday 7/16      | Deployed to Heroku and tested everything to make sure it was working.  |
-| Friday 7/17      | Added Nav class for nav buttons and moved toggle functions to the App class. Started to work with Materialize |
-| Saturday 7/18      | Learned basic Adobe Lightroom to edit photos and added them to the photos class. Worked on Materialize css and site responsiveness |
+| Friday 7/17      | Added Nav class for nav buttons and moved toggle functions to the App class. Started to work with MaterializeCSS |
+| Saturday 7/18      | Learned basic Adobe Lightroom to edit photos and added them to the photos class. Worked on MaterializeCSS and site responsiveness |
 | Sunday 7/19      | Worked on styling and spacing of photos. Added styling to the footer. Fixed styling on the forms. |
-| Monday 7/20      | Worked on styling for mobile vs desktop |
+| Monday 7/20      | Worked on styling for mobile vs desktop. I did this backwards again! |
 | Tuesday 7/21      | Fixed a bunch of styling for mobile on the forms, updated README.md |
 
 
