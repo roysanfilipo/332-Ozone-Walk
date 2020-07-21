@@ -38,7 +38,7 @@ The user can:
 | Friday 7/17      | Added Nav class for nav buttons and moved toggle functions to the App class. Started to work with Materialize |
 | Saturday 7/18      | Learned basic Adobe Lightroom to edit photos and added them to the photos class. Worked on Materialize css and site responsiveness |
 | Sunday 7/19      | Worked on styling and spacing of photos. Added styling to the footer. Fixed styling on the forms. |
-| Monday 7/20      | TBD |
+| Monday 7/20      | Worked on styling for mobile vs desktop |
 | Tuesday 7/21      | TBD |
 
 

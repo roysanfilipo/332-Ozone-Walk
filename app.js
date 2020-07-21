@@ -6,7 +6,7 @@ class Nav extends React.Component {
 
     return (
         <div className="nav-wrapper">
-          <a href="#" className="brand-logo right socialmedia"><img src="https://i.imgur.com/3ZVWPLj.png" /></a>
+          <a href="https://www.instagram.com/" className="brand-logo right socialmedia"><img src="https://i.imgur.com/3ZVWPLj.png" /></a>
           <ul id="nav-mobile" className="left">
             <li><button className="waves-effect waves-light btn-small blue-grey lighten-2 button" onClick={toggleShowAbout}>About</button></li>
             <li><button className="waves-effect waves-light btn-small blue-grey lighten-2 button" onClick={toggleShowPhotos}>Photos</button></li>
