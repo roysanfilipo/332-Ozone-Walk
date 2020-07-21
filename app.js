@@ -28,13 +28,13 @@ class About extends React.Component {
                     <div className="card-content white-text">
                       <span className="abouttexttitle">Welcome</span>
                         <div className="section abouttext">
-                          <p>332 Ozone is a beautiful four bedroom, 3 bathroom residence located on the quiet, eastern end of Fire Island Pines.</p>
+                          <p>332 Ozone is a beautiful four bedroom, three bathroom residence located on the quiet, eastern end of Fire Island Pines.</p>
                         </div>
                         <div className="section abouttext">
-                          <p>This 1979 classic home, best known for appearing on the cover of Tom Bianchi’s famous art book, “Fire Island Pines”, can sleep 8 comfortably while boasting both ocean and bay views from its second floor.</p>
+                          <p>This 1979 classic home, best known for appearing on the cover of Tom Bianchi’s famous art book, “Fire Island Pines: Polaroids, 1975-1983”, can sleep eight comfortably while boasting both ocean and bay views from its second floor.</p>
                         </div>
                         <div className="section abouttext">
-                          <p>With a pool, jacuzzi and the beach only a few steps away, 332 has everything you and your friends will need to make your next summer the most memorable one.</p>
+                          <p>With a large pool, jacuzzi and the beach only a few steps away, 332 has everything you and your friends will need to make your next summer the most memorable one.</p>
                         </div>
                     </div>
                   </div>
@@ -104,10 +104,14 @@ class Features extends React.Component {
                     <span className="featurestitle">Features</span>
                     <ul>
                       <li className="featurestext">Four bedrooms and three bathrooms</li>
-                      <li className="featurestext">Spacious kitchen with Allclad cookware and dishwasher</li>
+                      <div className="divider"></div>
+                      <li className="featurestext">Spacious kitchen with dishwasher and All-Clad cookware</li>
+                      <div className="divider"></div>
                       <li className="featurestext">Large pool, hot tub, and outdoor shower</li>
-                      <li className="featurestext">Washer and dryer</li>
-                      <li className="featurestext">Smart TV and indoor/outdoor Sonos soundsystem</li>
+                      <div className="divider"></div>
+                      <li className="featurestext">Washer/dryer</li>
+                      <div className="divider"></div>
+                      <li className="featurestext">Smart TV and indoor/outdoor Sonos sound system</li>
                     </ul>
                   </div>
                 </div>
@@ -161,7 +165,7 @@ class Contact extends React.Component {
 
 class Guestbook extends React.Component {
     state = {
-        admin: false,
+        admin: true,
         entries: []
     }
 
@@ -327,7 +331,8 @@ class App extends React.Component {
             (response) => {
                 this.setState({
                     entries: response.data
-                })
+                });
+                window.location.reload();
             }
         )
     }

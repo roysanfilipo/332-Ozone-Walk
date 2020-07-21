@@ -1,6 +1,6 @@
 #  :shell: :sweat_drops: :rainbow: 332-Ozone-Walk :rainbow: :high_heel: :anchor:
 
-![Home Page](INSERT IMAGE OF PROJECT HERE)
+![Home Page](https://i.imgur.com/7bmHvjV.png)
 
 ### :computer: Creator:
 
@@ -9,21 +9,25 @@
 
 ## :sunrise: About:
 
-[332-Ozone-Walk](TBD) is a single page web application that advertises the rental property located at 332 Ozone Walk in Fire Island Pines off the southern coast of Long Island, New York.
+[332-Ozone-Walk](https://fip-332-ozone-walk.herokuapp.com/) is a single page web application that advertises the rental property located at 332 Ozone Walk in Fire Island Pines off the southern coast of Long Island, New York.
 
 This is a simple site that allows the user to see a little of what they should expect while renting 332 Ozone Walk for a summer.
 
 ## :star: Features:
-The user can:
-- Navigate to to the main page to see an image of the house and a list of buttons
+###The user can:
+- Navigate to to the main page to see an image of the house and a navbar with buttons
+- Click a button to learn a little about the property
 - Click a button to see photos of the house
 - Click a button to see features the house has to offer
+- Click a button to see reviews about a house, add a review (only admin can delete the review)
 - Click a button to find contact information
-- Click a button to see reviews about a house, add a review (only admin can edit or delete the review)
 
 ## :wrench: :nut_and_bolt: :hammer: The Build:
 ### Technologies:
-- TBD
+- PHP Backend (utilized for the guestbook)
+- ReactJS
+- MaterializeCSS
+- emailJS Service for contact email backend
 
 ## :sun_with_face: :full_moon_with_face: My Timeline:
 | Day           | Tasks         |
@@ -39,14 +43,17 @@ The user can:
 | Saturday 7/18      | Learned basic Adobe Lightroom to edit photos and added them to the photos class. Worked on Materialize css and site responsiveness |
 | Sunday 7/19      | Worked on styling and spacing of photos. Added styling to the footer. Fixed styling on the forms. |
 | Monday 7/20      | Worked on styling for mobile vs desktop |
-| Tuesday 7/21      | TBD |
+| Tuesday 7/21      | Fixed a bunch of styling for mobile on the forms, updated README.md |
 
 
 ## :dancer: Wins:
-- TBD
+- Excited that I figured out how to incorporate emailJS in my sendEmail function and that I got it working pretty quickly. It was a little tricky, but works well!
+- Excited to see the potential of MaterializeCSS. I love the styling options for the buttons, cards, navbar, etc. The only styling I used outside of materialize was dealing with some mobile font sizing issues and the main page title font.
+- The way the site is built, everything seems to load pretty smoothly.
 
 ## :sweat: Challenges:
-- TBD
+- I was not able to create a user model so so that I could log in as an admin to show the delete buttons for the guestbook entries. I have the delete functionality and it shows if the admin state is set as true, but I will need to go back and add the ability to log in as an admin so that they appear without altering the code.
+- For some reason my sites tend to start out looking better on desktop and I end up using a media query to style the mobile version. I know this is backwards and I need to remember to do this in reverse. It was also sort of difficult at times to battle the MaterializeCSS, especially for the font-sizes on the forms. I had to use some work-arounds to get things to work properly, so I will need to go back and figure out if there are better ways of handling this.
 
 ## :blue_book: Sources:
 - Materialize Framework
