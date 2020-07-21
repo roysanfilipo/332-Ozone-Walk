@@ -143,15 +143,17 @@ class Contact extends React.Component {
 
     render = () => {
         return (
-          <div>
-            <form className="contact-form" onSubmit={this.sendEmail}>
-                <input type="hidden" name="contact_number"/>
-                <input type="text" name="user_name" value={this.state.name} placeholder="name" />
-                <input type="email" name="user_email" value={this.state.email} placeholder="email"/>
-                <input type="text" name="user_phone" value={this.state.phone} placeholder="phone #"/>
-                <textarea name="message" class="materialize-textarea" type="textarea" value={this.state.message} placeholder="message"/>
-                <input className="waves-effect waves-light btn-small blue-grey lighten-2 send" type="submit" value="Send" />
-            </form>
+          <div className="row">
+            <div className="col s12">
+              <form className="contact-form blue-grey darken-1 z-depth-5" onSubmit={this.sendEmail}>
+                  <input type="hidden" name="contact_number"/>
+                  <input type="text" name="user_name" value={this.state.name} placeholder="name" />
+                  <input type="email" name="user_email" value={this.state.email} placeholder="email"/>
+                  <input type="text" name="user_phone" value={this.state.phone} placeholder="phone #"/>
+                  <textarea name="message" class="materialize-textarea" type="textarea" value={this.state.message} placeholder="message"/>
+                  <input className="waves-effect waves-light btn-small blue-grey lighten-2 send" type="submit" value="Send" />
+              </form>
+              </div>
           </div>
         )
     }
@@ -210,12 +212,16 @@ class Guestbook extends React.Component {
             </div>
             <div className="container">
               <h5 className="guesttitle">Sign the guestbook!</h5>
-              <form className="newform" onSubmit={createEntry}>
-                  <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
-                  <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
-                  <textarea class="materialize-textarea" onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
-                  <input className="waves-effect waves-light btn-small blue-grey lighten-2 add" type="submit" value="Add"/>
-              </form>
+                <div className="row">
+                  <div className="col s12">
+                    <form className="newform  blue-grey darken-1 z-depth-5" onSubmit={createEntry}>
+                        <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
+                        <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
+                        <textarea class="materialize-textarea" onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
+                        <input className="waves-effect waves-light btn-small blue-grey lighten-2 add" type="submit" value="Add"/>
+                    </form>
+                  </div>
+                </div>
             </div>
           </div>
         )
@@ -392,9 +398,9 @@ class App extends React.Component {
                 <div className="main">
                     <h1 className="address">332 Ozone Walk</h1>
                     <h3 className="location">Fire Island Pines</h3>
-                    <div className ="center-align z-depth-5">
+                    <div className ="center-align">
                       {this.state.showimage ? (
-                        <img src="https://i.imgur.com/OZoSefJ.jpg" />
+                        <img id="mainimage" src="https://i.imgur.com/OZoSefJ.jpg" />
                       ) : (
                         ''
                       )}

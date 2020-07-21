@@ -48,13 +48,20 @@ h1, h3 {
   font-size: 15px;
 }
 
+.newform {
+  padding: 10px;
+}
+
+.contact-form {
+  padding: 10px;
+}
+
 .footer {
   font-size: 20px;
 }
 
 img {
   width: 100%;
-  padding: 0;
 }
 
 li {
@@ -150,6 +157,20 @@ footer {
 
   .guestentry {
     font-size: 35px;
+  }
+
+  nav {
+    padding-bottom: 50px;
+    padding-left: 10px;
+  }
+
+  input[type="text"] {
+    padding: 5px;
+    font-size: 30px;
+  }
+  textarea[type="textarea"] {
+    padding: 5px;
+    font-size: 30px;
   }
 
 }
