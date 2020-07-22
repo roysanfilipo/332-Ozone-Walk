@@ -154,7 +154,7 @@ class Contact extends React.Component {
                   <input type="text" name="user_name" value={this.state.name} placeholder="name" />
                   <input type="email" name="user_email" value={this.state.email} placeholder="email"/>
                   <input type="text" name="user_phone" value={this.state.phone} placeholder="phone #"/>
-                  <textarea name="message" class="materialize-textarea" type="textarea" value={this.state.message} placeholder="message"/>
+                  <textarea name="message" className="materialize-textarea" type="textarea" value={this.state.message} placeholder="message"/>
                   <input className="waves-effect waves-light btn-small blue-grey lighten-2 send" type="submit" value="Send" />
               </form>
               </div>
@@ -165,7 +165,7 @@ class Contact extends React.Component {
 
 class Guestbook extends React.Component {
     state = {
-        admin: true,
+        admin: false,
         entries: []
     }
 
