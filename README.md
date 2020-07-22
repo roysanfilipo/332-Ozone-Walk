@@ -58,6 +58,7 @@ This is a simple site that allows the user to see a little of what they should e
 ## :sweat: Challenges:
 - I was not able to create a user model so so that I could log in as an admin to show the delete buttons for the guestbook entries. I have the delete functionality and it shows if the admin state is set as true, but I will need to go back and add the ability to log in as an admin so that they appear without altering the code.
 - For some reason my sites tend to start out looking better on desktop and I end up using a media query to style the mobile version. I know this is backwards and I need to remember to do this in reverse. It was also sort of difficult at times to battle the MaterializeCSS, especially for the font-sizes on the forms. I had to use some work-arounds to get things to work properly, so I will need to go back and figure out if there are better ways of handling this.
+- They app may or may not work sometimes when you add a guestbook entry from safari? I've tested it and it is inconsistent. I'm not sure if it is a PostgreSQL, Safari, or heroku issue or all of the above! I will have to keep investigating! 
 
 ## :blue_book: Sources:
 - Materialize Framework

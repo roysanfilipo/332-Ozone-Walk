@@ -221,7 +221,7 @@ class Guestbook extends React.Component {
                     <form className="newform  blue-grey darken-1 z-depth-5" onSubmit={createEntry}>
                         <input onChange={changeNewEntryTitle} type="text" placeholder="title"/>
                         <input onChange={changeNewEntryDate} type="date" placeholder="date"/>
-                        <textarea class="materialize-textarea" onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
+                        <textarea className="materialize-textarea" onChange={changeNewEntryNote} type="textarea" placeholder="note"/>
                         <input className="waves-effect waves-light btn-small blue-grey lighten-2 add" type="submit" value="Add"/>
                     </form>
                   </div>
@@ -333,6 +333,7 @@ class App extends React.Component {
                     entries: response.data
                 });
                 window.location.reload();
+                consol.log(response.data);
             }
         )
     }
