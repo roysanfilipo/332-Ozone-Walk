@@ -165,7 +165,7 @@ class Contact extends React.Component {
 
 class Guestbook extends React.Component {
     state = {
-        admin: false,
+        admin: true,
         entries: []
     }
 
